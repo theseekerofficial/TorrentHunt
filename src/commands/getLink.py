@@ -25,7 +25,7 @@ def getLink(message, userLanguage=None, called=False):
                 msg = language['cantView'][userLanguage]
             
             else:
-                msg = f"✨ <b>{response['name']}</b>\n\n<code>{response['magnetLink']}</code>\n\n<b>🔥via @TorrentHuntBot</b>"
+                msg = f"✨ <b>{response['name']}</b>\n\n<code>{response['magnetLink']}</code>\n\n<b>🔥via @TSSC_Torrent_Robot</b>"
                 markup.add(telebot.types.InlineKeyboardButton(text='ℹ️ ' + language['moreInfo'][userLanguage].replace(':',''), callback_data=f"cb_getInfo:{torrentId}"))
                 
                 if response['images']:
