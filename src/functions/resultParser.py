@@ -77,7 +77,7 @@ def result(response, userLanguage, resultType, torrentType, page, category=None,
     
     else:
         if msg:
-            markup.add(telebot.types.InlineKeyboardButton(text='🌟 Rate ', url='https://t.me/tlgrmcbot?start=torrenthuntbot-review'), telebot.types.InlineKeyboardButton(text=language['donateBtn'][userLanguage], url='https://buymeacoffee.com/hemantapkh'))
+            markup.add(telebot.types.InlineKeyboardButton(text='🌟 Rate ', url='https://t.me/tlgrmcbot?start=torrenthuntbot-review'), telebot.types.InlineKeyboardButton(text=language['donateBtn'][userLanguage], url='https://www.buymeacoffee.com/theseekerscave'))
     
     return msg, markup
     
