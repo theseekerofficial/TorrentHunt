@@ -72,7 +72,7 @@ def lang(message, userLanguage, called=False, greet=False):
 #: Markup for non subscribed users
 def notSubscribedMarkup(userLanguage):
     markup = telebot.types.InlineKeyboardMarkup([[
-            telebot.types.InlineKeyboardButton(text='Downloader 🤖', url='https://t.me/tokmatebot?start=TorrentHuntInline'),
-            telebot.types.InlineKeyboardButton(text=language['joinChannelBtn'][userLanguage], url='https://t.me/h9youtube'),
+            telebot.types.InlineKeyboardButton(text='Downloader 🤖', url='https://t.me/Master_Torrenz_s_Cave'),
+            telebot.types.InlineKeyboardButton(text=language['joinChannelBtn'][userLanguage], url='https://t.me/the_seeker_s_cave'),
             ]])
     return markup
