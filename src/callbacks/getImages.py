@@ -12,7 +12,7 @@ def getImages(call, userLanguage):
     try:
         if len(response['images']) >= 2:
             for image in response['images']:
-                media.append(telebot.types.InputMediaPhoto(image.replace('.th.','.'), caption=f"✨ {response['name']}\n\n{language['moreInfo'][userLanguage]} /getLink_{torrentId}\n{language['link'][userLanguage]} /getLink_{torrentId}\n\n🔥 via @TorrentHuntBot"))
+                media.append(telebot.types.InputMediaPhoto(image.replace('.th.','.'), caption=f"✨ {response['name']}\n\n{language['moreInfo'][userLanguage]} /getLink_{torrentId}\n{language['link'][userLanguage]} /getLink_{torrentId}\n\n🔥 via @TSSC_Torrent_Robot"))
                 
                 if len(media) > 6:
                     bot.send_media_group(call.message.chat.id, media)
@@ -21,7 +21,7 @@ def getImages(call, userLanguage):
             if media:
                 bot.send_media_group(call.message.chat.id, media)
         else:
-            bot.send_photo(call.message.chat.id, photo=response['images'][0].replace('.th.','.'), caption=f"✨ {response['name']}\n\n{language['moreInfo'][userLanguage]} /getLink_{torrentId}\n{language['link'][userLanguage]} /getLink_{torrentId}\n\n🔥 via @TorrentHuntBot")
+            bot.send_photo(call.message.chat.id, photo=response['images'][0].replace('.th.','.'), caption=f"✨ {response['name']}\n\n{language['moreInfo'][userLanguage]} /getLink_{torrentId}\n{language['link'][userLanguage]} /getLink_{torrentId}\n\n🔥 via @TSSC_Torrent_Robot")
     
     except Exception as e:
         bot.send_message(call.message.chat.id, language['errorSendingImage'][userLanguage])
