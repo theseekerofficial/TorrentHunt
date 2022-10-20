@@ -26,7 +26,7 @@ def getTorrent(call, userLanguage):
         #! Deleting the file
         remove(f"/tmp/TorrentHunt/{call.from_user.id}/{torrentInfo['infoHash']}.torrent")
 
-        bot.send_document(call.message.chat.id, data=data, caption=f"{torrentInfo['name']}\n\n{language['size'][userLanguage]}{torrentInfo['size']}\n{language['seeders'][userLanguage]}{torrentInfo['seeders']}\n{language['leechers'][userLanguage]}{torrentInfo['leechers']}\n\n<b>🔥via @TorrentHuntBot</b>", thumb=thumbnail.content if thumbnail else None)
+        bot.send_document(call.message.chat.id, data=data, caption=f"{torrentInfo['name']}\n\n{language['size'][userLanguage]}{torrentInfo['size']}\n{language['seeders'][userLanguage]}{torrentInfo['seeders']}\n{language['leechers'][userLanguage]}{torrentInfo['leechers']}\n\n<b>🔥via @TSSC_Torrent_Robot</b>", thumb=thumbnail.content if thumbnail else None)
     
     #! Torrent file not found in itorrents
     else:
