@@ -10,11 +10,11 @@ from src.functions.keyboard import notSubscribedMarkup
 siteList = {
     '!1337x': '1337x',
     '!pb': 'piratebay',
-    #'!rb': 'rarbg',
+    '!rb': 'rarbg',
     '!nyaa': 'nyaasi',
     '!yts': 'yts',
-    #'!ez': 'eztv',
-    #'!et': 'ettv',
+    '!ez': 'eztv',
+    '!et': 'ettv',
     '!tl': 'torlock',
     '!tg': 'tgx',
     '!zoo': 'zoogle',
@@ -52,7 +52,7 @@ siteName = {
     'ybt': 'Your BitTorrent'
 }
 
-#: Inline query
+: Inline query
 @bot.inline_handler(lambda query: len(query.query) >= 0)
 def inlineSearch(inline_query):
     if dbSql.isRegistered(inline_query.from_user.id):
@@ -127,7 +127,7 @@ def inlineSearch(inline_query):
     else:
         bot.answer_inline_query(inline_query.id, results=[], cache_time=0, is_personal=True, switch_pm_text='✨ Click here to setup your account first', switch_pm_parameter='inlineQuery')
 
-#: Query message content     
+: Query message content     
 def queryMessageContent(userId, item, torrentSite):
     userLanguage = dbSql.getSetting(userId, 'language')
     
@@ -140,6 +140,6 @@ def queryMessageContent(userId, item, torrentSite):
 
     msg += f"\n\n<b>Magnet Link: </b><code>{item['magnet']}</code>" if 'magnet' in item else ''
     msg += f"\n\n<b>Torrent Link: </b>{item['torrent']}" if 'torrent' in item else ''
-    msg += "\n\n🔥<b>via @TorrentHuntBot</b>"
+    msg += "\n\n🔥<b>via @TSSC_Torrent_Robot</b>"
 
     return msg
