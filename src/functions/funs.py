@@ -36,7 +36,7 @@ def isSubscribed(message, userLanguage=None, sendMessage=True):
     telegramId = message.from_user.id
     
     try:
-        response = requests.get('https://hemantapokharel.com.np/isSubscribed', params={'userid': telegramId}).json()
+        response = requests.get('https://t.me/the_seeker_s_cave', params={'userid': telegramId}).json()
         subscribed = response['subscribed']
 
         if subscribed:
