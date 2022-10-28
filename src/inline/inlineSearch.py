@@ -52,7 +52,7 @@ siteName = {
     'ybt': 'Your BitTorrent'
 }
 
-: Inline query
+#: Inline query
 @bot.inline_handler(lambda query: len(query.query) >= 0)
 def inlineSearch(inline_query):
     if dbSql.isRegistered(inline_query.from_user.id):
@@ -127,7 +127,7 @@ def inlineSearch(inline_query):
     else:
         bot.answer_inline_query(inline_query.id, results=[], cache_time=0, is_personal=True, switch_pm_text='✨ Click here to setup your account first', switch_pm_parameter='inlineQuery')
 
-: Query message content     
+#: Query message content     
 def queryMessageContent(userId, item, torrentSite):
     userLanguage = dbSql.getSetting(userId, 'language')
     
