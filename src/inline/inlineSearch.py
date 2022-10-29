@@ -101,7 +101,7 @@ def inlineSearch(inline_query):
                                 dbSql.setMagnet(item['hash'], item['name'], item['magnet'])
                                 magnetKey = 'Db_'+item['hash']
                                 markup.add(telebot.types.InlineKeyboardButton(text='⭐', callback_data=f'addWishlist_{magnetKey}'))
-                                markup.add(telebot.types.InlineKeyboardButton(text=language['addToSeedr'][userLanguage], url=f't.me/torrentseedrbot?start=addTorrent{magnetKey}'))
+                                markup.add(telebot.types.InlineKeyboardButton(text=language['addToSeedr'][userLanguage], url=f'https://t.me/Master_Torrenz_s_Cave'))
                             
                             else:
                                 markup = telebot.types.InlineKeyboardMarkup()
