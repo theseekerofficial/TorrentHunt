@@ -116,12 +116,12 @@ def inlineSearch(inline_query):
 
                     else:
                         if page == 1:
-                            bot.answer_inline_query(inline_query.id, [telebot.types.InlineQueryResultArticle(id=0, title=language['noResults'][userLanguage], url='https://t.me/h9youtube', hide_url=True, thumb_url='https://raw.githubusercontent.com/hemantapkh/TorrentHunt/main/images/notfound.jpg', description=results['error'], input_message_content=telebot.types.InputTextMessageContent(language['noResults'][userLanguage], parse_mode='HTML'))], is_personal=True)
+                            bot.answer_inline_query(inline_query.id, [telebot.types.InlineQueryResultArticle(id=0, title=language['noResults'][userLanguage], url='https://t.me/the_seeker_s_cave', hide_url=True, thumb_url='https://raw.githubusercontent.com/hemantapkh/TorrentHunt/main/images/notfound.jpg', description=results['error'], input_message_content=telebot.types.InputTextMessageContent(language['noResults'][userLanguage], parse_mode='HTML'))], is_personal=True)
 
                 else:
                     bot.answer_inline_query(inline_query.id, results=[], cache_time=0, is_personal=True, switch_pm_text=f'Enter the query to search in {siteName[site]}', switch_pm_parameter='inlineQuery')
         else:
-            reply = telebot.types.InlineQueryResultArticle(id=1, title=language['notSubscribedCallback'][userLanguage], description=language['clickForMoreDetails'][userLanguage], thumb_url='https://raw.githubusercontent.com/hemantapkh/TorrentHunt/main/images/H9Logo.jpg', input_message_content=telebot.types.InputTextMessageContent(language['notSubscribed'][userLanguage], parse_mode='HTML'), reply_markup=notSubscribedMarkup(userLanguage))
+            reply = telebot.types.InlineQueryResultArticle(id=1, title=language['notSubscribedCallback'][userLanguage], description=language['clickForMoreDetails'][userLanguage], thumb_url='https://raw.githubusercontent.com/theseeker99/Images/main/Untitled%20design%20(2).png', input_message_content=telebot.types.InputTextMessageContent(language['notSubscribed'][userLanguage], parse_mode='HTML'), reply_markup=notSubscribedMarkup(userLanguage))
             bot.answer_inline_query(inline_query.id, [reply], is_personal=True, cache_time=0)
 
     else:
